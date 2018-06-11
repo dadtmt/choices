@@ -1,11 +1,10 @@
 import React from "react"
 import PreparationChoice from "./PreparationChoice"
 
-const ListPrestations = ({ prestations }) => (
+const ListPrestations = ({ prestations, select }) => (
   <div>
     {prestations.map(prestation => (
-      // <div>{prestation.name}</div>
-      <PreparationChoice key={prestation.id} {...prestation} />
+      <PreparationChoice key={prestation.id} {...prestation} select={select} />
     ))}
   </div>
 )

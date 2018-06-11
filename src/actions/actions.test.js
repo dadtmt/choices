@@ -15,10 +15,11 @@ describe("action to choose a prestation", () => {
   it("should return an choice of a prestation with a prestation id", () => {
     const expected = {
       type: CHOOSE_PRESTATION,
-      prestationId: 2
+      prestationId: 2,
+      preparationId: 1
     }
 
-    expect(makeChoosePrestation(2)).toEqual(expected)
+    expect(makeChoosePrestation(2, 1)).toEqual(expected)
   })
 })
 

@@ -5,9 +5,10 @@ export const CHOOSE_SHOP = "CHOOSE_SHOP"
 export const CHOOSE_TIMESLOT = "CHOOSE_TIMESLOT"
 export const PRESTATIONS_RECEIVED = "PRESTATIONS_RECEIVED"
 
-export const makeChoosePrestation = prestationId => ({
+export const makeChoosePrestation = (prestationId, preparationId) => ({
   type: CHOOSE_PRESTATION,
-  prestationId
+  prestationId,
+  preparationId
 })
 
 export const makeChooseService = serviceId => ({

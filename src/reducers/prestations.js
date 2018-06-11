@@ -275,7 +275,15 @@ const prestations = (prevState = initialState, action) => {
   if (action.type === CHOOSE_PRESTATION) {
     return prevState.map(prestation => ({
       ...prestation,
-      selected: action.prestationId === prestation.id
+      preparations: prestation.preparations.map(preparation => ({
+        ...preparation,
+        selected:
+          prestation.id === action.prestationId
+            ? preparation.id === action.preparationId
+              ? !preparation.selected
+              : false
+            : preparation.selected
+      }))
     }))
   }
   return prevState

@@ -6,10 +6,10 @@ describe("prestations", () => {
     const prevState = [
       {
         id: 1,
-        selected: false,
         name: "Maquillage",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -23,13 +23,11 @@ describe("prestations", () => {
             choices: [
               {
                 id: 1,
-                selected: false,
                 title: "Uniforme et 'Effet bonne mine', sur tout le visage",
                 options: []
               },
               {
                 id: 2,
-                selected: false,
                 title: "Focus plus prononcé sur un élément de votre choix",
                 options: [
                   "Charbonneux",
@@ -97,10 +95,10 @@ describe("prestations", () => {
       },
       {
         id: 2,
-        selected: false,
         name: "Coiffure",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -183,59 +181,10 @@ describe("prestations", () => {
       },
       {
         id: 3,
-        selected: false,
-        name: "Coupe femmes",
-        image: "",
-        description: "",
-        preparations: [
-          {
-            id: 1,
-            selected: false,
-            titlePreparation: "Coupe classique",
-            duration: {
-              minutes: 20
-            },
-            price: 16,
-            choices: [
-              {
-                id: 1,
-                title: "Coupes classiques",
-                options: [
-                  "Des coupes droites",
-                  "Des coupes de pointes",
-                  "Des dégradés simples"
-                ]
-              }
-            ]
-          },
-          {
-            id: 2,
-            selected: false,
-            titlePreparation: "Coupe très stylisée",
-            duration: {
-              minutes: 30
-            },
-            price: 24,
-            choices: [
-              {
-                id: 1,
-                selected: false,
-                title: "Coupes très stylisées",
-                options: [
-                  "Des coupes très dégradées",
-                  "Des coupes spéciales changement de look (exemple: carré plongeant sur cheveux longs)"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 4,
-        selected: false,
         name: "Vernis",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -256,16 +205,16 @@ describe("prestations", () => {
         ]
       },
       {
-        id: 5,
-        selected: false,
-        name: "Hommes",
+        id: 4,
+        name: "Coiffure",
         image: "",
         description: "",
+        gender: "M",
         preparations: [
           {
             id: 1,
             selected: false,
-            titlePreparation: "Coupe et coiffage",
+            titlePreparation: "Coupe 1",
             duration: {
               minutes: 20
             },
@@ -273,7 +222,6 @@ describe("prestations", () => {
             choices: [
               {
                 id: 1,
-                selected: false,
                 title: "Coupe et stylling",
                 options: []
               }
@@ -282,24 +230,49 @@ describe("prestations", () => {
           {
             id: 2,
             selected: false,
-            titlePreparation: "Barbe",
+            titlePreparation: "Coupe 2",
             duration: {
-              minutes: 10
+              minutes: 20
             },
-            price: 7.5,
+            price: 16,
             choices: [
               {
                 id: 1,
-                selected: false,
-                title: "Taille de barbe simple",
+                title: "Coupe et stylling",
                 options: []
               }
             ]
           }
         ]
+      },
+      {
+        id: 5,
+        name: "Barbe",
+        image: "",
+        description: "",
+        gender: "M",
+        preparations: [
+          {
+            id: 1,
+            selected: false,
+            titlePreparation: "Barbe 1",
+            duration: {
+              minutes: 20
+            },
+            price: 16
+          },
+          {
+            id: 2,
+            selected: false,
+            titlePreparation: "Barbe 2",
+            duration: {
+              minutes: 20
+            },
+            price: 16
+          }
+        ]
       }
     ]
-
     const anyAction = {
       type: "ANY_ACTION"
     }
@@ -313,10 +286,10 @@ describe("prestations", () => {
     const prevState = [
       {
         id: 1,
-        selected: false,
         name: "Maquillage",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -330,13 +303,11 @@ describe("prestations", () => {
             choices: [
               {
                 id: 1,
-                selected: false,
                 title: "Uniforme et 'Effet bonne mine', sur tout le visage",
                 options: []
               },
               {
                 id: 2,
-                selected: false,
                 title: "Focus plus prononcé sur un élément de votre choix",
                 options: [
                   "Charbonneux",
@@ -404,10 +375,10 @@ describe("prestations", () => {
       },
       {
         id: 2,
-        selected: false,
         name: "Coiffure",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -490,59 +461,10 @@ describe("prestations", () => {
       },
       {
         id: 3,
-        selected: false,
-        name: "Coupe femmes",
-        image: "",
-        description: "",
-        preparations: [
-          {
-            id: 1,
-            selected: false,
-            titlePreparation: "Coupe classique",
-            duration: {
-              minutes: 20
-            },
-            price: 16,
-            choices: [
-              {
-                id: 1,
-                title: "Coupes classiques",
-                options: [
-                  "Des coupes droites",
-                  "Des coupes de pointes",
-                  "Des dégradés simples"
-                ]
-              }
-            ]
-          },
-          {
-            id: 2,
-            selected: false,
-            titlePreparation: "Coupe très stylisée",
-            duration: {
-              minutes: 30
-            },
-            price: 24,
-            choices: [
-              {
-                id: 1,
-                selected: false,
-                title: "Coupes très stylisées",
-                options: [
-                  "Des coupes très dégradées",
-                  "Des coupes spéciales changement de look (exemple: carré plongeant sur cheveux longs)"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 4,
-        selected: false,
         name: "Vernis",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -563,16 +485,16 @@ describe("prestations", () => {
         ]
       },
       {
-        id: 5,
-        selected: false,
-        name: "Hommes",
+        id: 4,
+        name: "Coiffure",
         image: "",
         description: "",
+        gender: "M",
         preparations: [
           {
             id: 1,
             selected: false,
-            titlePreparation: "Coupe et coiffage",
+            titlePreparation: "Coupe 1",
             duration: {
               minutes: 20
             },
@@ -580,7 +502,6 @@ describe("prestations", () => {
             choices: [
               {
                 id: 1,
-                selected: false,
                 title: "Coupe et stylling",
                 options: []
               }
@@ -589,19 +510,45 @@ describe("prestations", () => {
           {
             id: 2,
             selected: false,
-            titlePreparation: "Barbe",
+            titlePreparation: "Coupe 2",
             duration: {
-              minutes: 10
+              minutes: 20
             },
-            price: 7.5,
+            price: 16,
             choices: [
               {
                 id: 1,
-                selected: false,
-                title: "Taille de barbe simple",
+                title: "Coupe et stylling",
                 options: []
               }
             ]
+          }
+        ]
+      },
+      {
+        id: 5,
+        name: "Barbe",
+        image: "",
+        description: "",
+        gender: "M",
+        preparations: [
+          {
+            id: 1,
+            selected: false,
+            titlePreparation: "Barbe 1",
+            duration: {
+              minutes: 20
+            },
+            price: 16
+          },
+          {
+            id: 2,
+            selected: false,
+            titlePreparation: "Barbe 2",
+            duration: {
+              minutes: 20
+            },
+            price: 16
           }
         ]
       }
@@ -610,10 +557,10 @@ describe("prestations", () => {
     const expectedState = [
       {
         id: 1,
-        selected: false,
         name: "Maquillage",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -627,13 +574,11 @@ describe("prestations", () => {
             choices: [
               {
                 id: 1,
-                selected: false,
                 title: "Uniforme et 'Effet bonne mine', sur tout le visage",
                 options: []
               },
               {
                 id: 2,
-                selected: false,
                 title: "Focus plus prononcé sur un élément de votre choix",
                 options: [
                   "Charbonneux",
@@ -701,10 +646,10 @@ describe("prestations", () => {
       },
       {
         id: 2,
-        selected: true,
         name: "Coiffure",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -787,59 +732,10 @@ describe("prestations", () => {
       },
       {
         id: 3,
-        selected: false,
-        name: "Coupe femmes",
-        image: "",
-        description: "",
-        preparations: [
-          {
-            id: 1,
-            selected: false,
-            titlePreparation: "Coupe classique",
-            duration: {
-              minutes: 20
-            },
-            price: 16,
-            choices: [
-              {
-                id: 1,
-                title: "Coupes classiques",
-                options: [
-                  "Des coupes droites",
-                  "Des coupes de pointes",
-                  "Des dégradés simples"
-                ]
-              }
-            ]
-          },
-          {
-            id: 2,
-            selected: false,
-            titlePreparation: "Coupe très stylisée",
-            duration: {
-              minutes: 30
-            },
-            price: 24,
-            choices: [
-              {
-                id: 1,
-                selected: false,
-                title: "Coupes très stylisées",
-                options: [
-                  "Des coupes très dégradées",
-                  "Des coupes spéciales changement de look (exemple: carré plongeant sur cheveux longs)"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 4,
-        selected: false,
         name: "Vernis",
         image: "",
         description: "",
+        gender: "F",
         preparations: [
           {
             id: 1,
@@ -860,16 +756,16 @@ describe("prestations", () => {
         ]
       },
       {
-        id: 5,
-        selected: false,
-        name: "Hommes",
+        id: 4,
+        name: "Coiffure",
         image: "",
         description: "",
+        gender: "M",
         preparations: [
           {
             id: 1,
-            selected: false,
-            titlePreparation: "Coupe et coiffage",
+            selected: true,
+            titlePreparation: "Coupe 1",
             duration: {
               minutes: 20
             },
@@ -877,7 +773,6 @@ describe("prestations", () => {
             choices: [
               {
                 id: 1,
-                selected: false,
                 title: "Coupe et stylling",
                 options: []
               }
@@ -886,25 +781,51 @@ describe("prestations", () => {
           {
             id: 2,
             selected: false,
-            titlePreparation: "Barbe",
+            titlePreparation: "Coupe 2",
             duration: {
-              minutes: 10
+              minutes: 20
             },
-            price: 7.5,
+            price: 16,
             choices: [
               {
                 id: 1,
-                selected: false,
-                title: "Taille de barbe simple",
+                title: "Coupe et stylling",
                 options: []
               }
             ]
           }
         ]
+      },
+      {
+        id: 5,
+        name: "Barbe",
+        image: "",
+        description: "",
+        gender: "M",
+        preparations: [
+          {
+            id: 1,
+            selected: false,
+            titlePreparation: "Barbe 1",
+            duration: {
+              minutes: 20
+            },
+            price: 16
+          },
+          {
+            id: 2,
+            selected: false,
+            titlePreparation: "Barbe 2",
+            duration: {
+              minutes: 20
+            },
+            price: 16
+          }
+        ]
       }
     ]
 
-    const action = makeChoosePrestation(2)
+    const action = makeChoosePrestation(4, 1)
 
     expect(prestations(prevState, action)).toEqual(expectedState)
   })
