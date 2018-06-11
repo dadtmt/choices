@@ -6,9 +6,11 @@ const initialState = [
     name: "Maquillage",
     image: "",
     description: "",
+    gender: "F",
     preparations: [
       {
         id: 1,
+        selected: false,
         titlePreparation:
           "Maquillage' focus sur un élément' ou 'effet bonne mine' (au choix)",
         duration: {
@@ -37,6 +39,7 @@ const initialState = [
       },
       {
         id: 2,
+        selected: false,
         titlePreparation: "Maquillage KAROLS",
         duration: {
           minutes: 30
@@ -63,6 +66,7 @@ const initialState = [
       },
       {
         id: 3,
+        selected: false,
         titlePreparation: "Maquillage ultime",
         duration: {
           minutes: 45
@@ -91,9 +95,11 @@ const initialState = [
     name: "Coiffure",
     image: "",
     description: "",
+    gender: "F",
     preparations: [
       {
         id: 1,
+        selected: false,
         titlePreparation: "Coiffure stylisée",
         duration: {
           minutes: 20
@@ -119,6 +125,7 @@ const initialState = [
       },
       {
         id: 2,
+        selected: false,
         titlePreparation: "Coiffure stylisée élaborée",
         duration: {
           minutes: 30
@@ -144,6 +151,7 @@ const initialState = [
       },
       {
         id: 3,
+        selected: false,
         titlePreparation: "Coiffure stylisée très élaborée",
         duration: {
           minutes: 45
@@ -170,57 +178,14 @@ const initialState = [
   },
   {
     id: 3,
-    name: "Coupe femmes",
-    image: "",
-    description: "",
-    preparations: [
-      {
-        id: 1,
-        titlePreparation: "Coupe classique",
-        duration: {
-          minutes: 20
-        },
-        price: 16,
-        choices: [
-          {
-            id: 1,
-            title: "Coupes classiques",
-            options: [
-              "Des coupes droites",
-              "Des coupes de pointes",
-              "Des dégradés simples"
-            ]
-          }
-        ]
-      },
-      {
-        id: 2,
-        titlePreparation: "Coupe très stylisée",
-        duration: {
-          minutes: 30
-        },
-        price: 24,
-        choices: [
-          {
-            id: 1,
-            title: "Coupes très stylisées",
-            options: [
-              "Des coupes très dégradées",
-              "Des coupes spéciales changement de look (exemple: carré plongeant sur cheveux longs)"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 4,
     name: "Vernis",
     image: "",
     description: "",
+    gender: "F",
     preparations: [
       {
         id: 1,
+        selected: false,
         titlePreparation: "Pose de vernis au choix",
         duration: {
           minutes: 10
@@ -237,14 +202,16 @@ const initialState = [
     ]
   },
   {
-    id: 5,
-    name: "Hommes",
+    id: 4,
+    name: "Coiffure",
     image: "",
     description: "",
+    gender: "M",
     preparations: [
       {
         id: 1,
-        titlePreparation: "Coupe et coiffage",
+        selected: false,
+        titlePreparation: "Coupe 1",
         duration: {
           minutes: 20
         },
@@ -259,18 +226,46 @@ const initialState = [
       },
       {
         id: 2,
-        titlePreparation: "Barbe",
+        selected: false,
+        titlePreparation: "Coupe 2",
         duration: {
-          minutes: 10
+          minutes: 20
         },
-        price: 7.5,
+        price: 16,
         choices: [
           {
             id: 1,
-            title: "Taille de barbe simple",
+            title: "Coupe et stylling",
             options: []
           }
         ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: "Barbe",
+    image: "",
+    description: "",
+    gender: "M",
+    preparations: [
+      {
+        id: 1,
+        selected: false,
+        titlePreparation: "Barbe 1",
+        duration: {
+          minutes: 20
+        },
+        price: 16
+      },
+      {
+        id: 2,
+        selected: false,
+        titlePreparation: "Barbe 2",
+        duration: {
+          minutes: 20
+        },
+        price: 16
       }
     ]
   }

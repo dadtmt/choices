@@ -11,3 +11,11 @@ export const showServices = state =>
 export const showSex = state =>
   state.services.filter(service => service.selected && service.id === 1)
     .length > 0
+
+export const showFemalePrestation = state =>
+  state.genders.filter(gender => gender.selected && gender.sex === "F").length >
+  0
+
+export const showMalePrestation = state =>
+  state.genders.filter(gender => gender.selected && gender.sex === "M").length >
+  0

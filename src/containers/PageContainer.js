@@ -1,13 +1,23 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 
-import { showServices, showSex } from "../display"
+import {
+  showServices,
+  showSex,
+  showFemalePrestation,
+  showMalePrestation
+} from "../display"
 import ServiceSelectContainer from "./ServiceSelectContainer"
 import ShopSelectContainer from "./ShopSelectContainer"
+import PrestationFemaleContainer from "./PrestationFemaleContainer"
+import PrestationMaleContainer from "./PrestationMaleContainer"
+import GenderContainer from "./GenderContainer"
 
 const mapStateToProps = state => ({
   showServices: showServices(state),
-  showSex: showSex(state)
+  showSex: showSex(state),
+  showFemalePrestation: showFemalePrestation(state),
+  showMalePrestation: showMalePrestation(state)
 })
 
 class Page extends Component {
@@ -16,9 +26,9 @@ class Page extends Component {
       <div>
         <ShopSelectContainer />
         {this.props.showServices && <ServiceSelectContainer />}
-        {this.props.showSex && (
-          <div>Show sex because we choosed preparation</div>
-        )}
+        {this.props.showSex && <GenderContainer />}
+        {this.props.showMalePrestation && <PrestationMaleContainer />}
+        {this.props.showFemalePrestation && <PrestationFemaleContainer />}
       </div>
     )
   }
